@@ -8,7 +8,6 @@ private FinchTwitterFactory(Context context) {
     Configuration configuration = configurationBuilder.build();
     mTwitter = new TwitterFactory(configuration).getInstance();
 }
-
 public Twitter getTwitterInstance() {
     ConfigurationBuilder cb = new ConfigurationBuilder();
     cb.setOAuthConsumerKey(Keys.consumerKey);
@@ -18,7 +17,6 @@ public Twitter getTwitterInstance() {
     TwitterFactory tf = new TwitterFactory(cb.build());
     return tf.getInstance();
 }
-
 private void startOAuth() {
     ConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
     configurationBuilder.setOAuthConsumerKey(Const.CONSUMER_KEY);
